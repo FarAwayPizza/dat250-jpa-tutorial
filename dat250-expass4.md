@@ -1,5 +1,7 @@
 DAT250 Experiment 2 - Report
 
+Link to github: https://github.com/FarAwayPizza/dat250-jpa-tutorial/tree/master/src/main/java/no/hvl/dat250/jpa/tutorial
+
 ### 1. **Explain the used database and how/when it runs.**
 
 We are using the **H2 database**. H2 is an in-memory relational database engine commonly used for development and testing purposes. It allows us to test database functionalities without needing a dedicated database server.
