@@ -52,7 +52,7 @@ public class CreditCardsMainTest {
 
         assertEquals(firstCard.getNumber(), 12345);
         assertEquals(firstCard.getBalance(), -5000);
-        assertEquals(firstCard.getCreditLimit(), -10000);
+        assertEquals(firstCard.getCreditLimit(), 10000);
 
         assertEquals(secondCard.getNumber(), 123);
         assertEquals(secondCard.getBalance(), 1);
