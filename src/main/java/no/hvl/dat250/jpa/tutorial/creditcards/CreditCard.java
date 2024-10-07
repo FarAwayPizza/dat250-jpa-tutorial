@@ -4,33 +4,42 @@ import jakarta.persistence.*;
 
 @Entity
 public class CreditCard {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Integer number;
+    private Integer creditLimit;
+    private Integer balance;
 
-    public Integer getNumber() {
-        // TODO: implement method!
-        return null;
-    }
 
-    public Integer getBalance() {
-        // TODO: implement method!
-        return null;
-    }
+    @ManyToOne
+    private Pincode pincode;
 
-    public Integer getCreditLimit() {
-        // TODO: implement method!
-        return null;
-    }
+    @ManyToOne
+    private Customer owner;
 
-    public Pincode getPincode() {
-        // TODO: implement method!
-        return null;
-    }
 
-    public Bank getOwningBank() {
-        // TODO: implement method!
-        return null;
+    @ManyToOne
+    private Bank owningBank;
+
+    // Getters and Setters
+
+    public Integer getNumber() { return number; }
+    public void setNumber(Integer number) { this.number = number; }
+
+    public Integer getBalance() { return balance; }
+    public void setBalance(Integer balance) { this.balance = balance; }
+
+    public Integer getCreditLimit() { return creditLimit; }
+    public void setCreditLimit(Integer creditLimit) { this.creditLimit = creditLimit; }
+
+    public Pincode getPincode() { return pincode; }
+    public void setPincode(Pincode pinCode) { this.pincode = pinCode; }
+
+    public void setOwner(Customer owner) { this.owner = owner; }
+
+    public Bank getOwningBank() { return owningBank; }
+    public void setBank(Bank bank) {
+        this.owningBank = bank;
     }
 }

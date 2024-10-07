@@ -58,7 +58,7 @@ public class CreditCardsMainTest {
         assertEquals(secondCard.getBalance(), 1);
         assertEquals(secondCard.getCreditLimit(), 2000);
 
-        // Test pincode
+        // Test pincodes
         Pincode firstCardPincode = firstCard.getPincode();
 
         assertEquals(firstCardPincode.getId(), secondCard.getPincode().getId()); // Pincode objects of the two cards are identical!
